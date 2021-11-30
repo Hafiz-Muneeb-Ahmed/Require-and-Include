@@ -1,0 +1,15 @@
+<h1>All Posts</h1>
+
+<% @post.each do |p|%>
+  <p>
+  <ul>
+<li>
+  <p><%= link_to p.author, post_path(p.id) %><p>
+  <p>Post Type: <%= p.ptype%></p>
+  <%= link_to "edit", edit_post_path(p.id) %>
+  <%= link_to "delete", post_path(p.id),:confirm => " Are you sure to delete this ?",method: :delete %>
+  </li>
+</ul>
+</p> 
+  <% end %>
+  <%= link_to "Create Post", new_post_path %> 

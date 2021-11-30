@@ -1,0 +1,16 @@
+<h1>Create a Post</h1>
+<%= form_for @post do |p| %>
+  <p>
+  <%= p.label :author %>
+  <%= p.text_field :author %>
+  </p> 
+
+  <p>
+  <%= p.label :ptype, "Post Type"%>
+  <%= p.text_field :ptype %>
+  </p> 
+  <p>
+  <%= p.submit "Add a Post" %>
+  </p> 
+
+<% end %>

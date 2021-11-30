@@ -1,0 +1,11 @@
+<h1>Edit Post</h1>
+<%= form_for @post do |p| %>
+<%= p.label :Author%>
+<%= p.text_field :author%>
+<%= p.label :ptype, "Post Type"%>
+<%= p.text_field :ptype %>
+   <%= p.submit "Update Post"%>
+  
+<% end %>
+  
+
